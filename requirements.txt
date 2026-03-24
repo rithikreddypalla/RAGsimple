@@ -1,6 +1,6 @@
 # Core RAG dependencies
 langchain==0.3.23
-langchain-community==0.3.21
+langchain-community==0.3.27
 langchain-openai==0.3.11
 
 # Vector store
@@ -11,7 +11,7 @@ sentence-transformers==3.4.1
 
 # Document loaders
 pypdf==5.4.0
-unstructured==0.17.2
+unstructured==0.18.18
 
 # LLM provider
 openai==1.68.2
