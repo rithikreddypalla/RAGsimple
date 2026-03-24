@@ -1,0 +1,23 @@
+services:
+  rag:
+    build: .
+    container_name: ragsimple
+    env_file:
+      - .env
+    volumes:
+      # Persist the vector store and document data on the host
+      - ./chroma_db:/app/chroma_db
+      - ./data:/app/data
+      # Mount source for live editing without rebuilding
+      - ./src:/app/src
+    stdin_open: true
+    tty: true
+
+    # docker compose watch support (Docker Compose 2.22+)
+    develop:
+      watch:
+        - action: sync
+          path: ./src
+          target: /app/src
+        - action: rebuild
+          path: requirements.txt
