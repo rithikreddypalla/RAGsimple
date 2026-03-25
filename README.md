@@ -173,9 +173,3 @@ Expected output:
 - Final context-aware prompt printed in terminal
 
 ---
-
-## Next improvements (optional)
-- Replace hardcoded docs with file loader (`.txt`, `.pdf`, etc.)
-- Save/load FAISS index from disk
-- Add metadata per chunk (source, page, title)
-- Replace prompt-only logic with real LLM API call
